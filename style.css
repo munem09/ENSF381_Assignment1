@@ -26,6 +26,8 @@ nav {
     display: flex;
     width: 100%;
     background-color: #333;
+    align-items: center;
+    justify-content: space-around;
 }
 
 nav ul {
@@ -50,8 +52,54 @@ nav a {
 .main {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Product list section styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 45%; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: inline-flex;
+    flex-direction: column; 
     align-items: center;
 }
+
+
+td img {
+    max-width: 80%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+td p {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Add to Cart button styling */
+button {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45A049;
+}
+
 
 .about-us, .customer-reviews {
     background-color: #ddd;
@@ -92,3 +140,4 @@ footer {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding: 4px;
 }
+
