@@ -141,3 +141,49 @@ footer {
     padding: 4px;
 }
 
+/* Contact Section styling */
+.contact-section {
+    background-color: #ddd; /* Medium gray background */
+    padding: 20px;
+    margin: 20px auto; /* Center the section */
+    border-radius: 10px;
+    max-width: 600px; /* Adjust based on your design preference */
+    text-align: left; /* Align text to the left for the entire section */
+}
+
+/* Contact Method styling */
+.contact-method {
+    margin: 10px 0; /* Provide some spacing between contact methods */
+    text-align: left; /* Align text to the left for contact methods */
+}
+
+/* Adjust styles for unordered list and list items within the contact section */
+.contact-section ul {
+    list-style-type: none; /* Remove bullets from list */
+    padding: 0;
+    margin: 10px 0; /* Spacing below the social media links header */
+}
+
+.contact-section li {
+    margin: 0 10px 0 0; /* Space to the right of social media links */
+}
+
+/* Style for links within the contact section */
+.contact-section a, .contact-section a:visited {
+    color: inherit; /* Links use the parent's text color by default */
+    text-decoration: none; /* No underline by default */
+}
+
+.contact-section a:hover {
+    color: #007BFF; /* Blue color on hover for links */
+}
+
+/* Footer styling remains the same as in the previous CSS */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px; /* Space above the footer */
+}
+
