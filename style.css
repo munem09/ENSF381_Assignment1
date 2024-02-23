@@ -141,3 +141,98 @@ footer {
     padding: 4px;
 }
 
+/* Container for the gray box */
+.gray-box {
+    background-color: #ddd;
+}
+
+/* Login Form Section styling */
+.login-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Optional: Set a minimum height for centering on the viewport */
+}
+
+.login-form-container {
+    background-color: #fff; /* Background color for the login form container */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center; /* Center the content */
+    align-items: center; /* Center the content vertically */
+}
+
+/* Form Fields styling */
+form label {
+    display: block;
+    margin: 10px;
+}
+
+form input {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Login Button styling */
+form button {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+}
+
+form button:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
+/* Signup Link styling */
+.signup-link {
+    color: #007BFF;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Header and Footer styles */
+header, footer {
+    background-color: #333;
+    padding: 20px;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #333;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    width: 100%;
+}
+
+nav li {
+    flex-grow: 1;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+}
