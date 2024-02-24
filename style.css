@@ -1,9 +1,9 @@
-body, html {
+body {
     height:100%;
     margin: 0;
     display:center;
     flex-direction: column;
-    
+    place-items: center;
 }
 
 header {
@@ -65,12 +65,13 @@ nav a {
 table {
     width: 100%;
     border-collapse: collapse;
+    background-color: #ddd;
 }
 
 td {
-    background-color: #f9f9f9;
+    background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 10px;
     padding: 10px;
     width: 45%; 
@@ -83,7 +84,7 @@ td {
 
 td img {
     max-width: 80%;
-    border-radius: 8px;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
@@ -95,6 +96,7 @@ td p {
 /* Add to Cart button styling */
 button {
     background-color: #4CAF50;
+    border: none;
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
@@ -139,9 +141,8 @@ footer {
 }
 
 .star-rating {
-    color: #FFD700 !important; /* Yellow color for stars */
-    font-size: 24px; /* Adjust the font size as needed */
-    /* margin: 2px 0; Adjust the margin as needed */
+    color: #FFD700 !important;
+    font-size: 24px; 
     line-height: 1;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding: 4px;
@@ -149,39 +150,39 @@ footer {
 
 /* Contact Section styling */
 .contact-section {
-    background-color: #ddd; /* Medium gray background */
-    padding: 20px;
-    margin: 20px auto; /* Center the section */
-    border-radius: 10px;
-    max-width: 600px; /* Adjust based on your design preference */
-    text-align: left; /* Align text to the left for the entire section */
+    background-color: #ddd;
+    padding: 80px;
+    margin: 20px auto;
+    border-radius: 5px;
+    max-width: 600px; 
+    text-align: left; 
 }
 
 /* Contact Method styling */
 .contact-method {
-    margin: 10px 0; /* Provide some spacing between contact methods */
-    text-align: left; /* Align text to the left for contact methods */
+    margin: 10px 0; 
+    text-align: left;
 }
 
 /* Adjust styles for unordered list and list items within the contact section */
 .contact-section ul {
-    list-style-type: none; /* Remove bullets from list */
+    list-style-type: none; 
     padding: 0;
-    margin: 10px 0; /* Spacing below the social media links header */
+    margin: 10px 0; 
 }
 
 .contact-section li {
-    margin: 0 10px 0 0; /* Space to the right of social media links */
+    margin: 0 10px 0 0; 
 }
 
 /* Style for links within the contact section */
 .contact-section a, .contact-section a:visited {
-    color: inherit; /* Links use the parent's text color by default */
-    text-decoration: none; /* No underline by default */
+    color: inherit; 
+    text-decoration: none;
 }
 
 .contact-section a:hover {
-    color: #007BFF; /* Blue color on hover for links */
+    color: #007BFF; 
 }
 
 /* Footer styling remains the same as in the previous CSS */
@@ -196,25 +197,29 @@ footer {
 
 form {
     background-color: #ddd; /* Medium gray background */
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px; /* Increased width of the grey box */
+    padding: 85px;
+    padding-inline: 170px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    margin: 50px auto;
+    width: 200%;
+    max-width: 400px; /* Increased width of the grey box */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
+    justify-items: center;
 }
 
 /* Form Fields styling */
 form label {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 5px; /* Spacing for label */
 }
 
 form input[type="text"],
 form input[type="password"] {
-    width: 100%; /* Full width */
+    width: 80%; /* Full width */
     padding: 10px;
     margin-bottom: 10px; /* Spacing for input fields */
     border: 1px solid #ccc;
@@ -253,11 +258,11 @@ form button:hover {
 
 /* Signup Link styling */
 form p {
-    margin-top: 10px; /* Spacing above the sign-up link */
+    margin-top: 20px; /* Spacing above the sign-up link */
 }
 
 form p a {
-    color: #007BFF; /* Blue color for the sign-up link */
+    color: blue; /* Blue color for the sign-up link */
     text-decoration: none;
 }
 
