@@ -1,5 +1,9 @@
-body {
+body, html {
+    height:100%;
     margin: 0;
+    display:center;
+    flex-direction: column;
+    
 }
 
 header {
@@ -52,7 +56,9 @@ nav a {
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px;
 }
 
 /* Product list section styling */
@@ -187,3 +193,74 @@ footer {
     margin-top: 20px; /* Space above the footer */
 }
 
+
+form {
+    background-color: #ddd; /* Medium gray background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Increased width of the grey box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Form Fields styling */
+form label {
+    margin-top: 10px;
+    margin-bottom: 5px; /* Spacing for label */
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin-bottom: 10px; /* Spacing for input fields */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Container for password field and login button */
+.password-button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form input[type="password"] {
+    flex-grow: 1; /* Password field takes up available space */
+    margin-right: 10px; /* Space between password field and button */
+}
+
+/* "Login" Button styling */
+form button {
+    padding: 10px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: background-color 0.3s, opacity 0.3s; /* Smooth transition for hover effect */
+}
+
+form button:hover {
+    background-color: #45A049; /* Darker shade of green on hover */
+    opacity: 1;
+}
+
+/* Signup Link styling */
+form p {
+    margin-top: 10px; /* Spacing above the sign-up link */
+}
+
+form p a {
+    color: #007BFF; /* Blue color for the sign-up link */
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
