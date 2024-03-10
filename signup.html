@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Company Name</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="signup.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" style="width:80px; height:auto;">
+        <h1>Company Name</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </nav>
+    <main>
+        <form id="signupForm" class="form-container">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username" name="username" required pattern="[A-Za-z][A-Za-z0-9-_]{2,19}">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()-_=+[\]{}|;:'\",.<>?/`~]).{8,}">
+            
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password" name="confirmPassword" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" name="email" required>
+            
+            <button type="submit">Signup</button>
+        </form>
+        <div id="messageBoxContainer">
+            <p id="messageBox"></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
