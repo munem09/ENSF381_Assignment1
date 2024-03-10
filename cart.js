@@ -1,21 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     var cart = [];
 
-    // Check if a shopping cart header exists, if not create one
+    // Ensure the cart display has a header and a container for items
     var cartDisplay = document.getElementById("cart-display");
-    if (!cartDisplay.querySelector(".cart-header")) {
-        var cartHeader = document.createElement("h2");
-        cartHeader.className = "cart-header";
-        cartHeader.textContent = "Shopping Cart";
-        cartDisplay.appendChild(cartHeader);
-    }
+    var cartHeader = document.createElement("h2");
+    cartHeader.className = "cart-header";
+    cartHeader.textContent = "Shopping Cart";
+    cartDisplay.appendChild(cartHeader);
+
+    var cartItemsContainer = document.createElement("div");
+    cartItemsContainer.className = "cart-items-container";
+    cartDisplay.appendChild(cartItemsContainer);
 
     function updateCartDisplay() {
-        // Remove all cart items before adding new ones to update the cart display
-        var existingItems = cartDisplay.querySelectorAll(".cart-item");
-        existingItems.forEach(function(item) {
-            cartDisplay.removeChild(item);
-        });
+        cartItemsContainer.innerHTML = ""; // Clear existing cart items
 
         cart.forEach(function (item) {
             var cartItem = document.createElement("div");
@@ -33,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             cartItem.appendChild(removeButton);
 
-            cartDisplay.appendChild(cartItem);
+            cartItemsContainer.appendChild(cartItem);
         });
     }
 
@@ -68,6 +66,4 @@ document.addEventListener("DOMContentLoaded", function () {
             addItemToCart(productName, productPrice);
         });
     });
-
-    updateCartDisplay(); // To ensure the shopping cart header is added upon initial load
 });
