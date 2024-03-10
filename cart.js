@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var cartDisplay = document.getElementById("cart-display");
     var cartHeader = document.createElement("h2");
     cartHeader.className = "cart-header";
-    cartHeader.textContent = "Shopping Cart";
+    /*cartHeader.textContent = "Shopping Cart";*/
     cartDisplay.appendChild(cartHeader);
 
     var cartItemsContainer = document.createElement("div");
@@ -14,15 +14,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateCartDisplay() {
         cartItemsContainer.innerHTML = ""; // Clear existing cart items
-
+    
+        // Add a line break after the "Shopping Cart" header
+        var lineBreakHeader = document.createElement("br");
+        cartItemsContainer.appendChild(lineBreakHeader);
+    
+        // Append the "Shopping Cart" header
+        var cartHeader = document.createElement("h2");
+        cartHeader.className = "cart-header";
+        cartHeader.textContent = "Shopping Cart";
+        cartItemsContainer.appendChild(cartHeader);
+    
         cart.forEach(function (item) {
             var cartItem = document.createElement("div");
             cartItem.className = "cart-item";
-
+    
             var itemText = document.createElement("span");
             itemText.textContent = `${item.name} - $${item.price.toFixed(2)} - Quantity: ${item.quantity}`;
             cartItem.appendChild(itemText);
-
+    
             var removeButton = document.createElement("button");
             removeButton.textContent = "Remove";
             removeButton.className = "remove-button";
@@ -30,10 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 removeItemFromCart(item.name);
             });
             cartItem.appendChild(removeButton);
-
+    
             cartItemsContainer.appendChild(cartItem);
+    
+            // Add a line break after each item
+            var lineBreak = document.createElement("br");
+            cartItemsContainer.appendChild(lineBreak);
         });
     }
+    
 
     function addItemToCart(name, price) {
         var existingItem = cart.find(item => item.name === name);
@@ -43,6 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
             cart.push({ name: name, price: price, quantity: 1 });
         }
         updateCartDisplay();
+
+        // Display an alert confirming that the product has been added to the cart
+        alert(`${name} has been added to the cart.`);
     }
 
     function removeItemFromCart(name) {
@@ -67,3 +85,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
