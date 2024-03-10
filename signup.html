@@ -10,7 +10,7 @@
 <body>
     <header>
         <img src="logo.png" alt="Logo" style="width:80px; height:auto;">
-        <h1>Company Name</h1>
+        <h1>J&M Cigarettes</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -24,22 +24,23 @@
             <input type="text" id="username" placeholder="Enter your username" name="username" required pattern="[A-Za-z][A-Za-z0-9-_]{2,19}">
             
             <label for="password">Password:</label>
-            <input type="password" id="password" placeholder="Enter your password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()-_=+[\]{}|;:'\",.<>?/`~]).{8,}">
+            <input type="password" id="password" placeholder="Enter your password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()-_=+[\]{}|;:'\">
             
             <label for="confirmPassword">Confirm Password:</label>
             <input type="password" id="confirmPassword" placeholder="Confirm your password" name="confirmPassword" required>
             
-            <label for="email">Email:</label>
+            <div class="email-button-container">
+            <label for="email">Email:<br></label>
             <input type="email" id="email" placeholder="Enter your email" name="email" required>
-            
             <button type="submit">Signup</button>
+        </div>
         </form>
         <div id="messageBoxContainer">
             <p id="messageBox"></p>
         </div>
     </main>
     <footer>
-        <p>&copy; 2024 Company Name. All rights reserved.</p>
+        <p>&copy; 2024 J&M Cigarettes. All rights reserved.</p>
     </footer>
 </body>
 </html>

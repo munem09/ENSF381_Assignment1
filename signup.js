@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         // Check if password meets the criteria without showing special characters
         if (!form.password.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/)) {
-            message.textContent += 'Password doesn’t meet the criteria.\n';
+            message.textContent += 'Password does not meet the criteria.\n';
             hasError = true;
         }
         if (form.password.value !== form.confirmPassword.value) {
-            message.textContent += 'Passwords don’t match.\n';
+            message.textContent += 'Passwords does not match.\n';
             hasError = true;
         }
         // Simple check for email validity
