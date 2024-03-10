@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             message.textContent += 'Check the Username.\n';
             hasError = true;
         }
-        // Check if password meets the criteria without showing special characters
+        // Check if password meets the criteria
         if (!form.password.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/)) {
             message.textContent += 'Password does not meet the criteria.\n';
             hasError = true;
@@ -25,17 +25,17 @@ document.addEventListener('DOMContentLoaded', function() {
             message.textContent += 'Passwords does not match.\n';
             hasError = true;
         }
-        // Simple check for email validity
+        // Email validity check
         if (!form.email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
             message.textContent += 'Check the Email.\n';
             hasError = true;
         }
 
         if (hasError) {
-            messageBox.style.display = 'block'; // Show error messages
+            messageBox.style.display = 'block';
         } else {
             message.textContent = 'Signup successful!';
-            messageBox.style.display = 'block'; // Show success message
+            messageBox.style.display = 'block';
         }
     });
 });

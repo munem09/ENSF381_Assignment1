@@ -22,8 +22,8 @@ header img {
 }
 
 header h1 {
-    margin: 0; /* Remove default margin for h1 */
-    color: white; /* Set the font color to white */
+    margin: 0; 
+    color: white; 
 }
 
 nav {
@@ -123,7 +123,7 @@ button:hover {
     border-radius: 5px;
     margin: 20px;
     cursor: pointer;
-    color: white; /* Set the font color to white */
+    color: white;
 }
 
 footer {
@@ -176,7 +176,6 @@ footer {
     margin: 0 10px 0 0; 
 }
 
-/* Style for links within the contact section */
 .contact-section a, .contact-section a:visited {
     color: inherit; 
     text-decoration: none;
@@ -186,18 +185,17 @@ footer {
     color: #007BFF; 
 }
 
-/* Footer styling remains the same as in the previous CSS */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px; /* Space above the footer */
+    margin-top: 20px; 
 }
 
 
 form {
-    background-color: #ddd; /* Medium gray background */
+    background-color: #ddd;
     padding: 85px;
     padding-inline: 200px;
     padding-top: 15px;
@@ -205,7 +203,7 @@ form {
     border-radius: 5px;
     margin: 50px auto;
     width: 200%;
-    max-width: 400px; /* Increased width of the grey box */
+    max-width: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -215,14 +213,14 @@ form {
 /* Form Fields styling */
 form label {
     margin-top: 5px;
-    margin-bottom: 5px; /* Spacing for label */
+    margin-bottom: 5px;
 }
 
 form input[type="text"],
 form input[type="password"] {
-    width: 60%; /* Full width */
+    width: 60%;
     padding: 10px;
-    margin-bottom: 10px; /* Spacing for input fields */
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
@@ -236,50 +234,48 @@ form input[type="password"] {
 }
 
 form input[type="password"] {
-    flex-grow: 1; /* Password field takes up available space */
-    margin-right: 10px; /* Space between password field and button */
+    flex-grow: 1; 
+    margin-right: 10px; 
 }
 
 /* "Login" Button styling */
 form button {
     padding: 10px;
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     opacity: 0.5;
-    transition: background-color 0.3s, opacity 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s, opacity 0.3s; 
     align-self: flex-end; 
     margin-top: 10px;
 }
 
 form button:hover {
-    background-color: #45A049; /* Darker shade of green on hover */
+    background-color: #45A049;
     opacity: 1;
 }
 
-/* Signup Link styling */
 form p {
-    margin-top: 20px; /* Spacing above the sign-up link */
+    margin-top: 20px;
 }
 
 form p a {
-    color: blue; /* Blue color for the sign-up link */
+    color: blue; 
     text-decoration: none;
 }
 
 form p a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
 }
 
-/* Add this to your existing CSS */
 #cart-display {
     display: flex;
     background-color: #ddd;
     align-items: center;
     justify-content: center;
-    min-height: 200px; /* Set a minimum height to make it visually centered */
+    min-height: 200px; 
 }
 
 .cart-items-container {
@@ -313,7 +309,7 @@ form p a:hover {
 
 /* Message box container styling */
 #messageBoxContainer {
-    display: none; /* Hide the message box by default */
+    display: none;
     border: 2px;
     background-color: #f9f9f9;
     padding: 10px;
@@ -326,7 +322,7 @@ form input[type="password"],
 form input[type="email"] {
     flex-grow: 1;
     margin-right: 10px;
-    width: 60%; /* Full width */
+    width: 60%; 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;

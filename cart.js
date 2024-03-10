@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cartDisplay.appendChild(cartItemsContainer);
 
     function updateCartDisplay() {
-        cartItemsContainer.innerHTML = ""; // Clear existing cart items
+        cartItemsContainer.innerHTML = ""; 
     
         // Add a line break after the "Shopping Cart" header
         var lineBreakHeader = document.createElement("br");
