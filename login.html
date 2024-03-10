@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - J&M Cigarettes</title>
     <link rel="stylesheet" href="style.css">
+    <script src="login.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,18 +21,21 @@
         </nav>
     </div>
     <main>
-        <form>
+        <form id="loginForm">
             <label for="username">Username:</label>
             <input type="text" id="username" placeholder="Enter your username" name="username">
             <label for="password">Password:</label>
             <div class="password-button-container">
-                
                 <input type="password" id="password" placeholder="Enter your password" name="password">
                 <button type="submit">Login</button>
             </div>
-            
             <p>New user? <a href="signup.html">Sign up here</a></p>
         </form>
+        
+        <!-- Message box container for success or error messages -->
+        <div id="messageBoxContainer">
+            <p id="messageBox"></p>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 J&M Cigarettes. All rights reserved.</p>

@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var cartDisplay = document.getElementById("cart-display");
     var cartHeader = document.createElement("h2");
     cartHeader.className = "cart-header";
-    /*cartHeader.textContent = "Shopping Cart";*/
     cartDisplay.appendChild(cartHeader);
 
     var cartItemsContainer = document.createElement("div");

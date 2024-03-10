@@ -307,3 +307,15 @@ form p a:hover {
 .remove-button:hover {
     background-color: #a00;
 }
+
+/* Message box container styling */
+#messageBoxContainer {
+    display: none; /* Hide the message box by default */
+    border: 2px solid black;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+}
+
+
+
