@@ -1,34 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Cart array to store added products
     var cart = [];
 
-    // Function to update the cart display
+    // Check if a shopping cart header exists, if not create one
+    var cartDisplay = document.getElementById("cart-display");
+    if (!cartDisplay.querySelector(".cart-header")) {
+        var cartHeader = document.createElement("h2");
+        cartHeader.className = "cart-header";
+        cartHeader.textContent = "Shopping Cart";
+        cartDisplay.appendChild(cartHeader);
+    }
+
     function updateCartDisplay() {
-        var cartDisplay = document.getElementById("cart-display");
-        cartDisplay.innerHTML = "";
+        // Remove all cart items before adding new ones to update the cart display
+        var existingItems = cartDisplay.querySelectorAll(".cart-item");
+        existingItems.forEach(function(item) {
+            cartDisplay.removeChild(item);
+        });
 
         cart.forEach(function (item) {
             var cartItem = document.createElement("div");
             cartItem.className = "cart-item";
 
-            var itemName = document.createElement("span");
-            itemName.textContent = item.name;
-            cartItem.appendChild(itemName);
-
-            var itemPrice = document.createElement("span");
-            itemPrice.textContent = "$" + item.price.toFixed(2);
-            cartItem.appendChild(itemPrice);
-
-            var itemQuantity = document.createElement("span");
-            itemQuantity.textContent = "Quantity: " + item.quantity;
-            cartItem.appendChild(itemQuantity);
+            var itemText = document.createElement("span");
+            itemText.textContent = `${item.name} - $${item.price.toFixed(2)} - Quantity: ${item.quantity}`;
+            cartItem.appendChild(itemText);
 
             var removeButton = document.createElement("button");
             removeButton.textContent = "Remove";
             removeButton.className = "remove-button";
             removeButton.addEventListener("click", function () {
-                removeItemFromCart(item);
-                updateCartDisplay();
+                removeItemFromCart(item.name);
             });
             cartItem.appendChild(removeButton);
 
@@ -36,55 +37,37 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Function to add an item to the cart
     function addItemToCart(name, price) {
         var existingItem = cart.find(item => item.name === name);
-
         if (existingItem) {
             existingItem.quantity++;
         } else {
             cart.push({ name: name, price: price, quantity: 1 });
         }
-
-        alert("Product added to the cart!");
         updateCartDisplay();
     }
 
-    // Function to remove an item from the cart
-    function removeItemFromCart(item) {
-        item.quantity--;
-
-        if (item.quantity === 0) {
-            var itemIndex = cart.indexOf(item);
-            cart.splice(itemIndex, 1);
+    function removeItemFromCart(name) {
+        var itemIndex = cart.findIndex(item => item.name === name);
+        if (itemIndex !== -1) {
+            cart[itemIndex].quantity--;
+            if (cart[itemIndex].quantity === 0) {
+                cart.splice(itemIndex, 1);
+            }
         }
+        updateCartDisplay();
     }
 
-    // Event listeners for "Add to Cart" buttons
-    var addToCartButtons = document.querySelectorAll("button");
+    var addToCartButtons = document.querySelectorAll(".add-to-cart-button");
 
     addToCartButtons.forEach(function (button) {
         button.addEventListener("click", function () {
-            var productName = this.parentNode.querySelector("h2").textContent;
-            var productPrice = parseFloat(this.parentNode.querySelector("p").textContent.replace("$", ""));
+            var productCell = this.closest("td");
+            var productName = productCell.querySelector("h2").textContent;
+            var productPrice = parseFloat(productCell.querySelector("p").textContent.replace("Price: $", ""));
             addItemToCart(productName, productPrice);
         });
     });
 
-    // Event listener for "Remove" button hover effect
-    document.addEventListener("mouseover", function (event) {
-        if (event.target.classList.contains("remove-button")) {
-            event.target.style.backgroundColor = "#ff0000";
-        }
-    });
-
-    // Event listener for "Remove" button mouseout effect
-    document.addEventListener("mouseout", function (event) {
-        if (event.target.classList.contains("remove-button")) {
-            event.target.style.backgroundColor = "";
-        }
-    });
-
-    // Initial cart display setup
-    updateCartDisplay();
+    updateCartDisplay(); // To ensure the shopping cart header is added upon initial load
 });

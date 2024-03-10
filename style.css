@@ -282,35 +282,31 @@ form p a:hover {
     display: flex;
     flex-direction: column;
 }
-Add this to your existing CSS
-.cart-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .cart-header {
-    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .cart-item {
-    margin: 10px;
+    /*background-color: #f0f0f0;
+    /* border: 1px solid #ccc;
     padding: 10px;
-    width: 60%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px; /* space between cart items */
+    /* border-radius: 4px; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .remove-button {
     background-color: #535353;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
     color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 .remove-button:hover {
-    background-color: #45A049;
+    background-color: #a00;
 }
